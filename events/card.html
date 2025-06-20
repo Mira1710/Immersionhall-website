@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Купить билет</title>
+    <link rel="stylesheet" href="../css/content.css">
+    <script src="../js/event.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container-card">
+    <div id="card-header">
+        <nav>
+            <ul>
+                <li class="header_about">
+                    <a href="../index.html" class="logo-link">
+                        <span class="logo-text event">Immersional hall</span>
+                        <span class="back-text event">← Назад</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="header_event event" >Мероприятия</li>
+                <img class="Nav" src="../img/active_steps2.svg" alt="">
+                <li class="header_about event">Купить билет</li>
+            </ul>
+        </nav>
+    </div>
+    <div id="card-input">
+        <form id="booking-form" class="form-card">
+            <div class="form-group">
+                <label for="firstname" class="required"></label>
+                <input
+                        type="text"
+                        id="firstname"
+                        name="firstname"
+                        required
+                        minlength="2"
+                        placeholder="Имя"
+                        autocomplete="given-name">
+                <div class="error-message" id="firstname-error">Введите корректное имя (минимум 2 символа)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastname" class="required"></label>
+                <input
+                        type="text"
+                        id="lastname"
+                        name="lastname"
+                        required
+                        minlength="2"
+                        placeholder="Фамилия"
+                        autocomplete="family-name">
+                <div class="error-message" id="lastname-error">Введите корректную фамилию (минимум 2 символа)</div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phone" class="required"></label>
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        pattern="^\+?[0-9\s\-\(\)]{7,20}$"
+                        placeholder="+7 "
+                        autocomplete="tel">
+                <div class="error-message" id="phone-error">Введите корректный номер телефона</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="required"></label>
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="Email"
+                        autocomplete="email">
+                <div class="error-message" id="email-error">Введите корректный email адрес</div>
+            </div>
+
+            <div class="form-group">
+                <label for="address"></label>
+                <textarea
+                        id="address"
+                        name="address"
+                        rows="3"
+                        placeholder="Адрес"
+                        autocomplete="street-address"></textarea>
+            </div>
+    </div>
+</div>
+<button class="tickets" type="submit">Забронировать билеты</button>
+</form>
+
+
+</body>
+</html>
