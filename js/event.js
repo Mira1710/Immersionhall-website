@@ -4,7 +4,7 @@ document.querySelectorAll('.event_stroke').forEach(item => {
         const imagePath = this.getAttribute('data-image');
         const eventImage = document.querySelector('.event_img');
 
-        // Плавная смена изображения
+
         eventImage.style.opacity = 0;
         setTimeout(() => {
             eventImage.src = imagePath;
@@ -47,7 +47,7 @@ document.querySelectorAll('.event_stroke').forEach(item => {
 
 
         carouselTrack.addEventListener('animationiteration', () => {
-            // Удаляем первые элементы
+
             const items = carouselTrack.querySelectorAll('.slider-item');
             const firstHalf = items.length / 2;
 

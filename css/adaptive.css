@@ -5,6 +5,40 @@
 
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 768px){
+    .panel {
+        padding: 20px;
+    }
+    .panel::after { display: none; } /* Скрываем номера панелей */
+
+    .main-nav .links {
+        gap: 15px; /* Уменьшаем расстояние между ссылками */
+    }
+    .main-nav a {
+        font-size: 12px; /* Уменьшаем шрифт в навигации */
+    }
+    .footer-nav { display: none; } /* Можно скрыть нижнюю навигацию для экономии места */
+
+    /* Главная панель */
+    .panel-home .content-center, .second-content, .third-content, .fifth-content {
+        flex-direction: column; /* Ставим контент в колонку */
+        gap: 40px;
+    }
+    .home-text h1 { font-size: 36px; letter-spacing: 5px; }
+    .home-text p { font-size: 16px; }
+    .logo_svg { width: 100px; height: 100px; }
+
+    /* Панель со сценариями */
+    .panel-scenarios { padding: 20px; }
+    .content-center {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .second-text h2 { font-size: 28px; }
+    .second-image img { max-width: 80%; }
+    .second-image img:first-child { width: 90%; }
+
+    /* Панели-заглушки */
+    .panel-placeholder h2 { font-size: 32px; }
 
 
 }
