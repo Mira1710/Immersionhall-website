@@ -11,13 +11,12 @@ nav{
     align-items: center;
     gap: 61vw;
     margin-left: 2vw;
+
 }
 
 ul{
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     gap: 2vw;
 }
 
@@ -32,13 +31,14 @@ ul{
 .back-text {
     transition: opacity 0.3s ease;
     display: inline-block;
+    color: black;
+    margin-top: 1vw;
 }
 
 .back-text {
+    margin-left: -10vw;
     opacity: 0;
     position: absolute;
-    left: 0;
-    top: 0;
 }
 
 .logo-link:hover .logo-text {
@@ -50,6 +50,7 @@ ul{
 }
 
 .header_about{
+    color: black;
     text-transform: uppercase;
     z-index: 100;
 }
@@ -65,12 +66,13 @@ ul{
 h1{
     font-size: 1.5vw;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
     color: white;
     z-index: 100;
 }
 
 p{
+    margin-top: 1vw;
     font-size: 1vw;
     font-weight: 300;
     color: white;
@@ -112,6 +114,7 @@ p{
 }
 
 .pixelated-image-card__img {
+
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -138,7 +141,7 @@ p{
 
 .pixelated-image-card__pixel {
     position: absolute;
-    background-color: #935b93;
+    background-color: rgba(147, 91, 147, 0.83);
     display: none;
 }
 
@@ -216,6 +219,7 @@ margin-left: 2vw;
     transition: background-color 0.3s ease;
     cursor: pointer;
     border: none;
+    text-decoration: none;
 }
 
 .poster1_btn:hover {
@@ -228,7 +232,6 @@ margin-left: 2vw;
 
 .line_about{
     margin-top: 10vw;
-    margin-left: 2vw;
     display: block;
     width: 95vw;
 }
@@ -260,10 +263,13 @@ margin-left: 2vw;
     display: flex;
     align-items: flex-start;
     width: 100vw;
-    margin-top: 4vw;
+    margin-top: 2vw;
     gap: 10vw;
     position: relative;
     flex: 1;
+}
+.event{
+    margin-top: 1vw;
 }
 
 .event_container{
@@ -272,6 +278,7 @@ margin-left: 2vw;
     margin-left: 2vw;
     min-height: 100vh;
 }
+
 .event_stroke{
     position: relative;
     padding: 2vw 0;
@@ -305,40 +312,43 @@ margin-left: 2vw;
     margin-left: 1vw;
 }
 
-.ev3{
-    margin-left: 13.5vw;
-}
-
-.ev4{
-    margin-left: 9.1vw;
-}
-
-.ev5{
-    margin-left: 11.5vw;
-}
-
-button {
-    margin-top: 8px;
+.poster2_btn {
     background: transparent;
-    border: 1px solid white;
     color: white;
-    padding: 6px 12px;
+    padding: 1vw 2vw;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1vw;
+    text-decoration: none;
 }
 
-button:hover {
+.poster2_btn:hover {
     background-color: #CA8448;
-    color: #2d2523;
+    color: #ffffff;
 }
 
+.buy-ticket{
+    position: absolute;
+    background: transparent;
+    color: white;
+    margin-top: 0.5vw;
+    border: white 0.1vw solid;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    font-size: 1vw;
+    text-decoration: none;
+}
+
+.buy-ticket:hover{
+    background-color: #CA8448;
+    color: #ffffff;
+}
 
 .event_images{
     width: 60vw;
     height: 50vw;
     margin-right: -15vw;
     position: sticky;
-        align-self: flex-start;
+    align-self: flex-start;
 }
 
 .event_img{
@@ -346,10 +356,7 @@ button:hover {
     object-fit: cover;
 }
 
-.sticky-disabled {
-    position: static !important;
-    transform: translateY(0) !important;
-}
+
 
 
 
@@ -361,23 +368,22 @@ button:hover {
     font-weight: 400;
     font-style: normal;
     color: #ffffff;
-
 }
 
 .page_event_1{
     position: absolute;
-    margin-top: -2vw;
-    margin-left: -1vw;
     width: 110%;
     height: 30vw;
-    z-index: 1;
+    z-index: -100;
+    margin-top: -3.1vw;
+    margin-left: -5vw;
 }
 
 .event_h2{
     position: absolute;
     z-index: 10;
     margin-top: 20vw;
-    margin-left: 2vw;
+    margin-left: -0.5vw;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
@@ -404,24 +410,86 @@ button:hover {
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;
     color: #ffffff;
+    /*gap: 20vw;*/
 }
 .ev_h1{
     width: 20%;
-    margin-top: 30vw;
-    margin-left: 2vw;
+    margin-top: 29vw;
+
 }
+
 .p_events{
     font-size: 1.2vw;
-    margin-top: 33vw;
-    margin-left: -10vw;
+    margin-top: 32vw;
+    margin-left: -9.5vw;
+    margin-bottom: 2.5vw;
+}
+
+.main-nav-event{
+    margin-top: -1vw;
+    gap: 60vw;
+    margin-left: -1vw;
 }
 
 .event_btn{
-    margin-left: 2vw;
+    margin-top: 0vw;
     padding: 1.1vw 3vw;
     background-color: #CA8448;
     border: none;
+    text-decoration: none;
 }
+
+.event_btn:hover{
+    background: #674529;
+    color: white;
+}
+
+.ev-logo-link {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.ev-logo-text,
+.ev-back-text, .header-ev, .header_event-2 {
+    transition: opacity 0.3s ease;
+    display: inline-block;
+    color: #ffffff;
+    text-transform: uppercase;
+
+}
+
+.ev-back-text {
+    margin-left: -10vw;
+    opacity: 0;
+    position: absolute;
+}
+
+.ev-logo-link:hover .ev-logo-text {
+    opacity: 0;
+}
+
+.ev-logo-link:hover .ev-back-text {
+    opacity: 1;
+}
+.header_event-2{
+    color: #9a9a9a;
+}
+.header_about-ev{
+    margin-left: -2vw;
+}
+.background_event{
+
+}
+
+
+
+
+
+
+
+
 
 /*card*/
 :root {
@@ -497,15 +565,20 @@ input:-webkit-autofill:active {
     padding: 1.1vw 33.7vw;
     margin-left: 9.5vw;
     border: none;
+    cursor: pointer;
+}
+.tickets:hover{
+    background: #674529;
+    color: white;
+
 }
 
 .carousel-container {
     position: relative;
+    margin-top: -7vw;
     width: 100%;
     height: 40vw;
-    min-height: 150px;
     overflow: hidden;
-    margin: 20px 0;
 }
 
 .carousel-track {
@@ -560,11 +633,21 @@ input:-webkit-autofill:active {
     color: white;
 }
 
+#card-header{
+    margin-left: -5vw;
+    margin-top: -1vw;
+}
+
 
 
 /*Store*/
+.store-menu{
+    margin-left: -3vw;
+}
+
+
 .icon-menu{
-    margin-left: 18vw;
+    margin-left: 13vw;
     z-index: 1000;
 }
 .icon-link{
@@ -578,8 +661,8 @@ input:-webkit-autofill:active {
     position: absolute;
     width: 100%;
     height: 35vw;
-    margin-left: -0.7vw;
-    margin-top: -0.6vw;
+    margin-left: 2vw;
+    margin-top: -1vw;
 }
 
 .store-content{
@@ -623,6 +706,20 @@ h2{
     color: white;
 }
 
+.e-book{
+    margin-left: 71.5vw;
+    border: white 0.1vw solid;
+    color: white;
+    padding: 0.8vw 4vw;
+    text-decoration: none;
+}
+
+.e-book:hover{
+    background: #369479;
+    color: white;
+    border: none;
+}
+
 .icon-card{
     position: absolute;
 
@@ -657,7 +754,7 @@ h2{
 }
 
 .с8{
-    gap:10vw;
+    gap:10.5vw;
 }
 .book-title{
     width: 100%;
@@ -723,4 +820,354 @@ h2{
 .book-btn:hover{
     background: #0a523d;
     color: white;
+}
+
+.c5{
+    margin-left: 1vw;
+}
+
+.c6{
+ margin-left: 1.5vw;
+}
+
+.c7{
+    margin-left: -0.8vw;
+}
+
+
+
+
+/*index - Главная*/
+.panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 80px;
+    transition: transform 1.2s cubic-bezier(0.86, 0, 0.07, 1);
+    overflow: hidden;
+}
+
+
+.panel::after {
+    content: attr(data-panel-number);
+    position: absolute;
+    bottom: 40px;
+    right: 3vw;
+    transform: translateX(-100%);
+    font-size: 1vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.main-nav, .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.main-nav .links {
+    position: absolute;
+    display: flex;
+    gap: 10vw;
+    margin-left: -5vw;
+    cursor: pointer;
+}
+
+.footer-nav .links{
+    position: absolute;
+    display: flex;
+    gap: 10vw;
+    margin-left: -5vw;
+}
+
+.main-nav a, .footer-nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav a:hover{
+    color: rgb(147, 91, 147);
+}
+
+.content-center {
+    display: flex;
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*text-align: center;*/
+}
+
+
+.panel-home {
+    background-color: #332E30;
+    z-index: 4;
+}
+
+.panel-home .content-center {
+    /*flex-direction: row;*/
+    /*!*justify-content: center;*!*/
+    /*!*align-items: center;*!*/
+    /*gap: 2vw;*/
+}
+
+.home-text h1 {
+    font-size: 6vw;
+    font-weight: 400;
+    margin-left: -3vw;
+    margin-top: -7vw;
+}
+
+.home-text p {
+    font-weight: 300;
+    font-size: 2vw;
+margin-top: 8vw;
+    margin-left: -2.5vw;
+    text-align: left;
+}
+
+.logo_svg {
+    position: absolute;
+    width: 45vw;
+    height: 45vw;
+    margin-left: 60vw;
+    margin-top: -15vw;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0% {stroke-dashoffset: 1500;
+        stroke-dasharray: 1500}
+    100% {stroke-dashoffset: 0;
+        stroke-dasharray: 1500}
+
+}
+
+
+/* Секция 2 */
+.panel-scenarios {
+    background-color: #C674DF;
+    color: #fff;
+    z-index: 3;
+}
+
+#about-second{
+    text-decoration: underline;
+}
+
+.second-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+    /*position: relative;*/
+}
+
+.second-text{
+    position: absolute;
+    margin-top: -85vw;
+    width: 50%;
+    height: 100vh;
+}
+
+.second-text h2{
+    width: 25vw;
+    font-size: 2.5vw;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+
+}
+
+.second-text p {
+    width: 40vw;
+    height: auto;
+    font-size: 1.2vw;
+    color: white;
+    font-weight: 400;
+    margin-left: 2vw;
+}
+
+.second-btn{
+    position: absolute;
+    margin-top: 1.5vw;
+    margin-left: 2vw;
+    padding: 1vw 4vw;
+    border: white 0.1vw solid;
+    text-decoration: none;
+}
+
+.second-btn:hover{
+    background-color: #ad36ad;
+    color: #ffffff;
+    border: none;
+}
+
+.second-image img{
+    position: absolute;
+    margin-left: 55vw;
+    margin-top: -33vw;
+}
+.second-pg{
+    margin-left: -2vw;
+}
+
+
+
+
+/*third section*/
+
+#about-third{
+    text-decoration: underline;
+}
+
+.panel-orange {
+    background-color: #D48C45;
+    z-index: 1;
+}
+
+.third-pg{
+    margin-left: -2vw;
+}
+
+.third-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+    /*position: relative;*/
+}
+
+.third-text{
+    position: absolute;
+    margin-top: -85vw;
+    width: 50%;
+    height: 100vh;
+}
+
+.third-text h2{
+    width: 25vw;
+    font-size: 2.5vw;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+
+}
+
+.third-text p {
+    width: 40vw;
+    height: auto;
+    font-size: 1.2vw;
+    color: white;
+    font-weight: 400;
+    margin-left: 2vw;
+}
+
+.third-btn{
+    position: absolute;
+    margin-top: 1.5vw;
+    margin-left: 2vw;
+    padding: 1vw 4vw;
+    border: white 0.1vw solid;
+    text-decoration: none;
+}
+
+.third-btn:hover{
+    background-color: #c47224;
+    color: #ffffff;
+    border: none;
+}
+
+
+
+
+/* Секция 4: Зеленая */
+.panel-green {
+    background-color: #2B8B67;
+    z-index: 2;
+}
+#about-fourth{
+    text-decoration: underline;
+}
+
+.fourth-btn{
+    position: absolute;
+    margin-top: 1.5vw;
+    margin-left: 2vw;
+    padding: 1vw 4vw;
+    border: white 0.1vw solid;
+    text-decoration: none;
+}
+
+.fourth-btn:hover{
+    background-color: #0c5e46;
+    color: #ffffff;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Секция 5: contacts */
+#about-fifth{
+    text-decoration: underline;
+}
+.fifth-text{
+    position: relative;
+}
+
+.fifth-h1{
+    position: absolute;
+    font-size: 8vw;
+    font-style: normal;
+    font-family: "IBM Plex Mono", monospace;
+    margin-top: -35vw;
+    margin-left: 10vw;
+}
+
+.fifth-footer{
+    position: absolute;
+}
+
+.line_index{
+    position: absolute;
+    margin-top: -15vw;
+    margin-left: -5vw;
+}
+
+.music_index{
+    position: absolute;
+    margin-top: -17.7vw;
+}
+
+.fifth-contact{
+    display: flex;
+    gap: 5vw;
+    margin-top: -5vw;
+}
+
+.telegram h3, .designer p{
+    text-transform: uppercase;
 }
