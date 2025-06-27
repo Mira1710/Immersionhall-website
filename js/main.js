@@ -57,6 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
         navigateTo(targetIndex);
     }, { passive: true });
 
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    container.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+
+    container.addEventListener('touchend', (event) => {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+        let targetIndex = currentPanelIndex;
+        // Проверяем, что свайп был достаточно длинным
+        if (Math.abs(touchEndX - touchStartX) < 50) return;
+
+        if (touchEndX < touchStartX) { // Свайп влево
+            targetIndex++;
+        } else { // Свайп вправо
+            targetIndex--;
+        }
+        navigateTo(targetIndex);
+    }
 
     setPanelPositions();
     container.style.visibility = 'visible';
