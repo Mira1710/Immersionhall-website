@@ -5,40 +5,202 @@
 
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 768px){
+    /*.panel {*/
+    /*    padding: 20px;*/
+    /*}*/
+    /*.panel::after { display: none; } !* Скрываем номера панелей *!*/
+
+    /*.main-nav .links {*/
+    /*    gap: 15px; !* Уменьшаем расстояние между ссылками *!*/
+    /*}*/
+    /*.main-nav a {*/
+    /*    font-size: 12px; !* Уменьшаем шрифт в навигации *!*/
+    /*}*/
+    /*.footer-nav { display: none; } !* Можно скрыть нижнюю навигацию для экономии места *!*/
+
+    /*!* Главная панель *!*/
+    /*.panel-home .content-center, .second-content, .third-content, .fifth-content {*/
+    /*    flex-direction: column; !* Ставим контент в колонку *!*/
+    /*    gap: 40px;*/
+    /*}*/
+    /*.home-text h1 { font-size: 36px; letter-spacing: 5px; }*/
+    /*.home-text p { font-size: 16px; }*/
+    /*.logo_svg { width: 100px; height: 100px; }*/
+
+    /*!* Панель со сценариями *!*/
+    /*.panel-scenarios { padding: 20px; }*/
+    /*.content-center {*/
+    /*    flex-direction: column;*/
+    /*    gap: 30px;*/
+    /*}*/
+    /*.second-text h2 { font-size: 28px; }*/
+    /*.second-image img { max-width: 80%; }*/
+    /*.second-image img:first-child { width: 90%; }*/
+
+    /*!* Панели-заглушки *!*/
+    /*.panel-placeholder h2 { font-size: 32px; }*/
+
+
+}
+
+@media (max-width: 1024px) {
     .panel {
-        padding: 20px;
+        padding: 30px 60px; /* */
     }
-    .panel::after { display: none; } /* Скрываем номера панелей */
 
-    .main-nav .links {
-        gap: 15px; /* Уменьшаем расстояние между ссылками */
+    .main-nav a, .footer-nav a {
+        font-size: 1.5vw; /* */
     }
-    .main-nav a {
-        font-size: 12px; /* Уменьшаем шрифт в навигации */
+
+    .home-text h1 {
+        font-size: 7vw; /* */
     }
-    .footer-nav { display: none; } /* Можно скрыть нижнюю навигацию для экономии места */
 
-    /* Главная панель */
-    .panel-home .content-center, .second-content, .third-content, .fifth-content {
-        flex-direction: column; /* Ставим контент в колонку */
-        gap: 40px;
+    .home-text p {
+        font-size: 2.5vw; /* */
     }
-    .home-text h1 { font-size: 36px; letter-spacing: 5px; }
-    .home-text p { font-size: 16px; }
-    .logo_svg { width: 100px; height: 100px; }
 
-    /* Панель со сценариями */
-    .panel-scenarios { padding: 20px; }
-    .content-center {
-        flex-direction: column;
-        gap: 30px;
+    .second-text h2, .third-text h2 {
+        font-size: 3vw; /* */
     }
-    .second-text h2 { font-size: 28px; }
-    .second-image img { max-width: 80%; }
-    .second-image img:first-child { width: 90%; }
 
-    /* Панели-заглушки */
-    .panel-placeholder h2 { font-size: 32px; }
+    .second-text p, .third-text p {
+        font-size: 1.5vw; /* */
+    }
 
+    .fifth-h1 {
+        font-size: 10vw; /* */
+        margin-top: -40vw; /* */
+    }
+}
 
+/* For mobile devices - landscape */
+@media (max-width: 768px) {
+    .panel {
+        padding: 20px 40px; /* */
+    }
+
+    .main-nav .links, .footer-nav .links {
+        gap: 8vw; /* */
+    }
+
+    .main-nav a, .footer-nav a {
+        font-size: 2vw; /* */
+    }
+
+    .home-text h1 {
+        font-size: 8vw; /* */
+        margin-top: -10vw; /* */
+    }
+
+    .home-text p {
+        font-size: 3vw; /* */
+        margin-top: 10vw; /* */
+    }
+
+    .logo_svg {
+        width: 50vw; /* */
+        height: 50vw; /* */
+        margin-left: 55vw; /* */
+        margin-top: -20vw; /* */
+    }
+
+    .second-content, .third-content {
+        flex-direction: column; /* */
+        gap: 2vw; /* */
+    }
+
+    .second-text, .third-text {
+        position: static; /* */
+        width: 100%; /* */
+        height: auto; /* */
+        margin-top: 0; /* */
+        text-align: center;
+    }
+
+    .second-text h2, .third-text h2 {
+        width: 100%; /* */
+        font-size: 4vw; /* */
+        margin-bottom: 2vh;
+    }
+
+    .second-text p, .third-text p {
+        width: 100%; /* */
+        font-size: 2vw; /* */
+        margin-left: 0; /* */
+    }
+
+    .second-btn, .third-btn, .fourth-btn {
+        position: static; /* */
+        margin: 2vh auto 0; /* */
+        display: inline-block;
+        padding: 1.5vw 6vw; /* */
+    }
+
+    .second-image img {
+        display: none; /* To prevent layout breaking on small screens */
+    }
+
+    .fifth-h1 {
+        font-size: 12vw; /* */
+        margin-top: -50vw; /* */
+        margin-left: 5vw; /* */
+    }
+
+    .fifth-contact {
+        flex-direction: column; /* */
+        gap: 3vw; /* */
+        margin-top: -20vw; /* */
+        align-items: center;
+    }
+}
+
+/* For mobile devices - portrait */
+@media (max-width: 480px) {
+    .panel {
+        padding: 15px 20px; /* */
+    }
+
+    .main-nav .links, .footer-nav .links {
+        gap: 6vw; /* */
+        margin-left: -3vw; /* */
+    }
+
+    .main-nav a, .footer-nav a {
+        font-size: 2.5vw; /* */
+    }
+
+    .home-text h1 {
+        font-size: 10vw; /* */
+        margin-left: -1.5vw; /* */
+    }
+
+    .home-text p {
+        font-size: 3.5vw; /* */
+    }
+
+    .logo_svg {
+        margin-top: -25vw; /* */
+    }
+
+    .second-text h2, .third-text h2 {
+        font-size: 5vw; /* */
+    }
+
+    .second-text p, .third-text p {
+        font-size: 2.5vw; /* */
+    }
+
+    .second-btn, .third-btn, .fourth-btn {
+        padding: 2vw 8vw; /* */
+    }
+
+    .fifth-h1 {
+        font-size: 15vw; /* */
+        margin-top: -60vw; /* */
+    }
+
+    .fifth-contact {
+        margin-top: -30vw; /* */
+    }
 }
