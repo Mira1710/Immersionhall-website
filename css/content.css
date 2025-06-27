@@ -4,6 +4,8 @@ body{
     font-style: normal;
     background-color: #433838;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 nav{
@@ -276,7 +278,6 @@ margin-left: 2vw;
     flex-direction: column;
     width: 50vw;
     margin-left: 2vw;
-    min-height: 100vh;
 }
 
 .event_stroke{
