@@ -75,132 +75,217 @@
 }
 
 /* For mobile devices - landscape */
+/*@media (max-width: 768px) {*/
+/*    .panel {*/
+/*        padding: 20px 40px; !* *!*/
+/*    }*/
+
+/*    .main-nav .links, .footer-nav .links {*/
+/*        gap: 8vw; !* *!*/
+/*    }*/
+
+/*    .main-nav a, .footer-nav a {*/
+/*        font-size: 2vw; !* *!*/
+/*    }*/
+
+/*    .home-text h1 {*/
+/*        font-size: 8vw; !* *!*/
+/*        margin-top: -10vw; !* *!*/
+/*    }*/
+
+/*    .home-text p {*/
+/*        font-size: 3vw; !* *!*/
+/*        margin-top: 10vw; !* *!*/
+/*    }*/
+
+/*    .logo_svg {*/
+/*        width: 50vw; !* *!*/
+/*        height: 50vw; !* *!*/
+/*        margin-left: 55vw; !* *!*/
+/*        margin-top: -20vw; !* *!*/
+/*    }*/
+
+/*    .second-content, .third-content {*/
+/*        flex-direction: column; !* *!*/
+/*        gap: 2vw; !* *!*/
+/*    }*/
+
+/*    .second-text, .third-text {*/
+/*        position: static; !* *!*/
+/*        width: 100%; !* *!*/
+/*        height: auto; !* *!*/
+/*        margin-top: 0; !* *!*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .second-text h2, .third-text h2 {*/
+/*        width: 100%; !* *!*/
+/*        font-size: 4vw; !* *!*/
+/*        margin-bottom: 2vh;*/
+/*    }*/
+
+/*    .second-text p, .third-text p {*/
+/*        width: 100%; !* *!*/
+/*        font-size: 2vw; !* *!*/
+/*        margin-left: 0; !* *!*/
+/*    }*/
+
+/*    .second-btn, .third-btn, .fourth-btn {*/
+/*        position: static; !* *!*/
+/*        margin: 2vh auto 0; !* *!*/
+/*        display: inline-block;*/
+/*        padding: 1.5vw 6vw; !* *!*/
+/*    }*/
+
+/*    .second-image img {*/
+/*        display: none; !* To prevent layout breaking on small screens *!*/
+/*    }*/
+
+/*    .fifth-h1 {*/
+/*        font-size: 12vw; !* *!*/
+/*        margin-top: -50vw; !* *!*/
+/*        margin-left: 5vw; !* *!*/
+/*    }*/
+
+/*    .fifth-contact {*/
+/*        flex-direction: column; !* *!*/
+/*        gap: 3vw; !* *!*/
+/*        margin-top: -20vw; !* *!*/
+/*        align-items: center;*/
+/*    }*/
+/*}*/
+
+/*!* For mobile devices - portrait *!*/
+/*@media (max-width: 480px) {*/
+/*    .panel {*/
+/*        padding: 15px 20px; !* *!*/
+/*    }*/
+
+/*    .main-nav .links, .footer-nav .links {*/
+/*        gap: 6vw; !* *!*/
+/*        margin-left: -3vw; !* *!*/
+/*    }*/
+
+/*    .main-nav a, .footer-nav a {*/
+/*        font-size: 2.5vw; !* *!*/
+/*    }*/
+
+/*    .home-text h1 {*/
+/*        font-size: 10vw; !* *!*/
+/*        margin-left: -1.5vw; !* *!*/
+/*    }*/
+
+/*    .home-text p {*/
+/*        font-size: 3.5vw; !* *!*/
+/*    }*/
+
+/*    .logo_svg {*/
+/*        margin-top: -25vw; !* *!*/
+/*    }*/
+
+/*    .second-text h2, .third-text h2 {*/
+/*        font-size: 5vw; !* *!*/
+/*    }*/
+
+/*    .second-text p, .third-text p {*/
+/*        font-size: 2.5vw; !* *!*/
+/*    }*/
+
+/*    .second-btn, .third-btn, .fourth-btn {*/
+/*        padding: 2vw 8vw; !* *!*/
+/*    }*/
+
+/*    .fifth-h1 {*/
+/*        font-size: 15vw; !* *!*/
+/*        margin-top: -60vw; !* *!*/
+/*    }*/
+
+/*    .fifth-contact {*/
+/*        margin-top: -30vw; !* *!*/
+/*    }*/
+/*}*/
+
+/* Отключаем вертикальный скролл на мобилке */
 @media (max-width: 768px) {
+    body, html {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .main-container {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .h-scroll-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 500vw; /* 5 секций по 100vw */
+        height: 100vh;
+    }
+
     .panel {
-        padding: 20px 40px; /* */
+        flex: 0 0 100vw;
+        height: 100vh;
+        position: relative;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
-    .main-nav .links, .footer-nav .links {
-        gap: 8vw; /* */
+    .main-nav,
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+        position: static;
     }
 
-    .main-nav a, .footer-nav a {
-        font-size: 2vw; /* */
+    .main-nav .links,
+    .footer-nav .links {
+        position: static;
+        flex-wrap: wrap;
+        gap: 5vw;
+        margin-left: 0;
     }
 
-    .home-text h1 {
-        font-size: 8vw; /* */
-        margin-top: -10vw; /* */
+    .main-nav a,
+    .footer-nav a {
+        font-size: 14px;
     }
 
-    .home-text p {
-        font-size: 3vw; /* */
-        margin-top: 10vw; /* */
+    .second-text,
+    .third-text {
+        position: static;
+        margin: 0;
+        width: 100%;
     }
 
-    .logo_svg {
-        width: 50vw; /* */
-        height: 50vw; /* */
-        margin-left: 55vw; /* */
-        margin-top: -20vw; /* */
-    }
-
-    .second-content, .third-content {
-        flex-direction: column; /* */
-        gap: 2vw; /* */
-    }
-
-    .second-text, .third-text {
-        position: static; /* */
-        width: 100%; /* */
-        height: auto; /* */
-        margin-top: 0; /* */
-        text-align: center;
-    }
-
-    .second-text h2, .third-text h2 {
-        width: 100%; /* */
-        font-size: 4vw; /* */
-        margin-bottom: 2vh;
-    }
-
-    .second-text p, .third-text p {
-        width: 100%; /* */
-        font-size: 2vw; /* */
-        margin-left: 0; /* */
-    }
-
-    .second-btn, .third-btn, .fourth-btn {
-        position: static; /* */
-        margin: 2vh auto 0; /* */
-        display: inline-block;
-        padding: 1.5vw 6vw; /* */
-    }
-
-    .second-image img {
-        display: none; /* To prevent layout breaking on small screens */
+    .second-image img,
+    .second-content img,
+    .third-content img {
+        position: static;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
     }
 
     .fifth-h1 {
-        font-size: 12vw; /* */
-        margin-top: -50vw; /* */
-        margin-left: 5vw; /* */
+        font-size: 12vw;
+        margin-top: 10vh;
+        margin-left: 0;
+    }
+
+    .line_index,
+    .music_index {
+        display: none;
     }
 
     .fifth-contact {
-        flex-direction: column; /* */
-        gap: 3vw; /* */
-        margin-top: -20vw; /* */
-        align-items: center;
-    }
-}
-
-/* For mobile devices - portrait */
-@media (max-width: 480px) {
-    .panel {
-        padding: 15px 20px; /* */
-    }
-
-    .main-nav .links, .footer-nav .links {
-        gap: 6vw; /* */
-        margin-left: -3vw; /* */
-    }
-
-    .main-nav a, .footer-nav a {
-        font-size: 2.5vw; /* */
-    }
-
-    .home-text h1 {
-        font-size: 10vw; /* */
-        margin-left: -1.5vw; /* */
-    }
-
-    .home-text p {
-        font-size: 3.5vw; /* */
-    }
-
-    .logo_svg {
-        margin-top: -25vw; /* */
-    }
-
-    .second-text h2, .third-text h2 {
-        font-size: 5vw; /* */
-    }
-
-    .second-text p, .third-text p {
-        font-size: 2.5vw; /* */
-    }
-
-    .second-btn, .third-btn, .fourth-btn {
-        padding: 2vw 8vw; /* */
-    }
-
-    .fifth-h1 {
-        font-size: 15vw; /* */
-        margin-top: -60vw; /* */
-    }
-
-    .fifth-contact {
-        margin-top: -30vw; /* */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 }
