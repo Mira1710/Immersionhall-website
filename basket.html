@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <ul class="icon-menu">
+        <a href="404.html" class="icon-link" title="Избранное">
+            <img class="icon-store" src="./img/heart.svg" alt="Избранное">
+            <span class="favorites-count">0</span>
+        </a>
+        <a href="card.html" class="icon-link" title="Корзина">
+            <img class="icon-store" src="./img/basket.svg" alt="Корзина">
+            <span class="cart-count">0</span>
+        </a>
+    </ul>
+</header>
+<main class="container">
+    <h2>Корзина</h2>
+    <div id="cart-container" class="cart-list">
+    </div>
+    <div id="cart-total" class="cart-total"></div>
+    <button id="clear-cart" class="clear-button">Очистить корзину</button>
+</main>
+<script src="./js/store.js"></script>
+</body>
+</html>

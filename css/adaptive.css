@@ -272,7 +272,7 @@
     .second-text h2, .third-text h2 {
         width: 90%;
         font-size: 6vw;
-        margin-top: -110vw;
+        margin-top: -100vw;
     }
 
     .second-text p, .third-text p {
@@ -288,8 +288,8 @@
     }
 
     .second-image img {
-        margin-left: -50vw;
-        margin-top: -190vw;
+        margin-left: -45vw;
+        margin-top: -175vw;
         width: 90vw;
         height: auto;
     }
@@ -297,7 +297,7 @@
     .fifth-h1 {
         font-size: 10vw;
         margin-left: 5vw;
-        margin-top: -120vw;
+        margin-top: -100vw;
     }
 
     .fifth-contact {
@@ -307,15 +307,18 @@
 }
 
 .line_index{
+    position: absolute;
 width: 80vw;
 height: auto;
+margin-top: -50vw;
 margin-left: 5vw;
-margin-top: -70vw;
+z-index: 1000; !important
 }
 
 .music_index{
+    position: absolute;
     margin-left: -50vw;
-    margin-top: -77.5vw;
+    margin-top: -70vw;
 }
 
 /* Tablet Styles (768px to 1024px) */

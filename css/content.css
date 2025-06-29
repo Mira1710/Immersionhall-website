@@ -1162,3 +1162,50 @@ margin-top: 8vw;
 .telegram h3, .designer p{
     text-transform: uppercase;
 }
+
+.body-404{
+    overflow: hidden;
+}
+
+.background{
+    width: 100%;
+    height: 95vh;
+    z-index: -1;
+}
+
+.container404{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: filter 0.3s ease;
+    z-index: 1;
+}
+
+.container404 img{
+    text-align: center;
+    position: absolute;
+    margin-top: -32vw;
+    margin-left: 25vw;
+    width: 50vw;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.container404 img:hover {
+    filter: url(#water-effect);
+}
+
+.container404 a{
+    position: absolute;
+    font-family: 'IBM Plex Mono', sans-serif;
+    padding: 1rem 5rem;
+    border: #CA8448 0.2rem solid;
+    text-align: end;
+    color: white;
+    margin-top: -40vw;
+    margin-left: 78vw;
+    text-decoration: none;
+}
+.container404 a:hover{
+    background: #CA8448 ;
+}
