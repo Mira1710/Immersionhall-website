@@ -6,21 +6,31 @@
     <title>Корзина</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-<header>
-    <ul class="icon-menu">
-        <a href="404.html" class="icon-link" title="Избранное">
-            <img class="icon-store" src="./img/heart.svg" alt="Избранное">
-            <span class="favorites-count">0</span>
-        </a>
-        <a href="card.html" class="icon-link" title="Корзина">
-            <img class="icon-store" src="./img/basket.svg" alt="Корзина">
-            <span class="cart-count">0</span>
-        </a>
+<body class="body-baskt">
+    <div class="store-menu">
+<nav>
+    <ul>
+        <li class="header_about">
+            <a href="index.html" class="logo-link">
+                <span class="logo-text event">Immersional hall</span>
+                <span class="back-text event">← Главная</span>
+            </a>
+        </li>
     </ul>
-</header>
-<main class="container">
-    <h2>Корзина</h2>
+    <ul class="icon-menu">
+    <a href="404.html" class="icon-link" title="Избранное">
+        <img class="icon-store" src="./img/heart.svg" alt="Избранное">
+        <span class="favorites-count">0</span>
+    </a>
+    <a href="basket.html" class="icon-link" title="Корзина">
+        <img class="icon-store" src="./img/basket.svg" alt="Корзина">
+        <span class="cart-count">0</span>
+    </a>
+</ul>
+</nav>
+</div>
+<h2 class="basket-h2">Корзина</h2>
+<main class="container-basket">
     <div id="cart-container" class="cart-list">
     </div>
     <div id="cart-total" class="cart-total"></div>

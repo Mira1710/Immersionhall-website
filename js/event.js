@@ -96,5 +96,4 @@ document.querySelectorAll('.event_stroke').forEach(item => {
     animate();
 
 
-
 })

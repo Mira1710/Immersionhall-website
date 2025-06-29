@@ -1,71 +1,107 @@
 addEventListener("DOMContentLoaded", () => {
-    document.getElementById('booking-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        resetErrors();
+    const form = document.getElementById('booking-form');
+    const successPopup = document.getElementById('success-popup');
+    const closeBtn = document.querySelector('.close-btn');
+    const submitBtn = document.querySelector('.tickets');
+
+    // Form validation function
+    function validateForm() {
         let isValid = true;
-
+        
+        // First name validation
         const firstname = document.getElementById('firstname');
-        if (!firstname.value || firstname.value.length < 2) {
-            showError('firstname-error', firstname);
+        const firstnameError = document.getElementById('firstname-error');
+        if (firstname.value.length < 2) {
+            firstnameError.style.display = 'block';
             isValid = false;
+        } else {
+            firstnameError.style.display = 'none';
         }
 
+        // Last name validation
         const lastname = document.getElementById('lastname');
-        if (!lastname.value || lastname.value.length < 2) {
-            showError('lastname-error', lastname);
+        const lastnameError = document.getElementById('lastname-error');
+        if (lastname.value.length < 2) {
+            lastnameError.style.display = 'block';
             isValid = false;
+        } else {
+            lastnameError.style.display = 'none';
         }
 
-
+        // Phone validation
         const phone = document.getElementById('phone');
+        const phoneError = document.getElementById('phone-error');
         const phonePattern = /^\+?[0-9\s\-\(\)]{7,20}$/;
         if (!phonePattern.test(phone.value)) {
-            showError('phone-error', phone);
+            phoneError.style.display = 'block';
             isValid = false;
+        } else {
+            phoneError.style.display = 'none';
         }
 
-
+        // Email validation
         const email = document.getElementById('email');
+        const emailError = document.getElementById('email-error');
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email.value)) {
-            showError('email-error', email);
+            emailError.style.display = 'block';
             isValid = false;
+        } else {
+            emailError.style.display = 'none';
         }
 
-        if (isValid) {
+        return isValid;
+    }
 
-            alert('Бронирование успешно оформлено! Спасибо.');
-            this.reset();
+    // Show popup
+    function showPopup() {
+        successPopup.style.display = 'block';
+        setTimeout(() => {
+            successPopup.style.opacity = '1';
+        }, 10);
+    }
+
+    // Hide popup
+    function hidePopup() {
+        successPopup.style.opacity = '0';
+        setTimeout(() => {
+            successPopup.style.display = 'none';
+        }, 300);
+    }
+
+    // Form submission
+    submitBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (validateForm()) {
+            // Here you would typically send form data to a server
+            // For this example, we'll just show the success popup
+            showPopup();
+            form.reset();
         }
     });
 
-    function showError(errorId, inputElement) {
-        document.getElementById(errorId).style.display = 'block';
-        inputElement.classList.add('input-error');
-    }
+    // Close popup when clicking the close button
+    closeBtn.addEventListener('click', hidePopup);
 
-    function resetErrors() {
-        const errors = document.querySelectorAll('.error-message');
-        errors.forEach(error => {
-            error.style.display = 'none';
-        });
-
-        const inputs = document.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.classList.remove('input-error');
-        });
-    }
-
-
-    document.querySelectorAll('input').forEach(input => {
-        input.addEventListener('input', function() {
-            this.classList.remove('input-error');
-            const errorId = this.id + '-error';
-            document.getElementById(errorId).style.display = 'none';
-        });
+    // Close popup when clicking outside
+    successPopup.addEventListener('click', function(e) {
+        if (e.target === successPopup) {
+            hidePopup();
+        }
     });
 
+    // Close popup with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && successPopup.style.display === 'block') {
+            hidePopup();
+        }
+    });
 
+    // Initialize popup as hidden
+    successPopup.style.display = 'none';
+    successPopup.style.opacity = '0';
+    successPopup.style.transition = 'opacity 0.3s ease';
 
 
 
