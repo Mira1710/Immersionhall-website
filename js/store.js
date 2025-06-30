@@ -1,41 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Cart will no longer be stored in localStorage, it resets on page refresh.
-    // Initialize cart as an empty array directly.
+    
     let cart = [];
-
-    // Removed the 'favorites' variable and related logic.
-
-    // Function to save data is no longer needed for cart, as it won't persist.
-    // However, keeping a dummy saveData function for consistency if other parts of code still call it.
     const saveData = (key, data) => {
-        // If you absolutely needed to save something temporarily *before* a full page refresh,
-        // you could use sessionStorage, but for a "reset on refresh" cart, this is effectively a no-op.
-        // localStorage.setItem(key, JSON.stringify(data)); // REMOVED for resetting cart
     };
 
     const updateCounters = () => {
         const cartCountEl = document.querySelector('.cart-count');
-        // Removed favoritesCountEl and related logic.
 
-        // Calculate total quantity of items in the cart
+
+       
         const totalCartItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
         if (cartCountEl) cartCountEl.textContent = totalCartItems;
-        // Removed favorites counter update.
+        
     };
 
-    // --- LOGIC FOR PRODUCT PAGES (e.g., index.html) ---
+   
 
     const productContainer = document.querySelector('.store-content');
 
-    // Updates the state of ALL "Add to Cart" buttons on the page
+   
     const updateProductButtonsState = () => {
         document.querySelectorAll('.product-card').forEach(card => {
             const productId = card.dataset.id;
             const addToCartBtn = card.querySelector('.add-to-cart');
-            // Removed favoriteBtn and related logic.
+            
 
-            // Update cart button state
+          
             const itemInCart = cart.find(item => item.id === productId);
             if (itemInCart) {
                 addToCartBtn.textContent = `Кол-во (${itemInCart.quantity})`;
@@ -53,31 +44,31 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!card) return;
             const productId = card.dataset.id;
 
-            // Click on "Add to Cart"
+           
             if (event.target.closest('.add-to-cart')) {
                 let itemInCart = cart.find(item => item.id === productId);
                 if (itemInCart) {
-                    itemInCart.quantity++; // Increase quantity
+                    itemInCart.quantity++; 
                 } else {
-                    // Add new product
+                  
                     const product = {
                         id: productId,
                         name: card.querySelector('.product-info p:first-child').textContent,
                         price: card.querySelector('.product-info p:last-child').textContent,
                         image: card.querySelector('img').src,
-                        quantity: 1, // Initial quantity
+                        quantity: 1, 
                     };
                     cart.push(product);
                 }
-                saveData('cart', cart); // This call is now effectively a no-op for persistence
+                saveData('cart', cart); 
                 updateCounters();
-                updateProductButtonsState(); // Update button states
+                updateProductButtonsState(); 
             }
-            // Removed "Favorite" click logic.
+            
         });
     }
 
-    // --- LOGIC FOR CART PAGE (e.g., card.html) ---
+    
 
     const cartContainer = document.getElementById('cart-container');
     if (cartContainer) {
@@ -138,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 cart = cart.filter(item => item.id !== id);
             }
 
-            saveData('cart', cart); // This call is now effectively a no-op for persistence
+            saveData('cart', cart); 
             renderCart();
             updateCounters();
         });
@@ -146,25 +137,23 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('clear-cart').addEventListener('click', () => {
             if (confirm('Очистить всю корзину?')) {
                 cart = [];
-                saveData('cart', cart); // This call is now effectively a no-op for persistence
+                saveData('cart', cart); 
                 renderCart();
                 updateCounters();
             }
         });
 
-        // Initial render of the cart on the cart page
+       
         renderCart();
     }
 
-    // --- REMOVED: Favorite button initialization and logic ---
-    // The previous code had a redundant DOMContentLoaded listener for favorites here.
-    // All favorites-related event listeners and initializations are removed.
+    
 
-    // --- ANIMATION LOGIC (unrelated to cart/favorites, so it remains) ---
+   
     const wrapper = document.querySelector('.footer_about');
     const note = document.querySelector('.music_about');
 
-    // Ensure these elements exist before trying to use them
+    
     if (wrapper && note) {
         let targetX = 0;
         let currentX = 0;
@@ -172,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         window.addEventListener('mousemove', (e) => {
             const wrapperRect = wrapper.getBoundingClientRect();
-            const noteRect = note.getBoundingClientRect(); // not used, but kept from original
+            const noteRect = note.getBoundingClientRect(); 
             const noteWidth = note.offsetWidth;
             const percent = e.clientX / window.innerWidth;
 
@@ -196,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // Initialization when any page loads
+    
     updateCounters();
     if (productContainer) {
         updateProductButtonsState();
